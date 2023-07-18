@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css"
+  </head>
+
+  <body>
+    <h1 id="title">Title</h1>
+    <p id="description">description</p>
+    
+    <form id="survey-form">
+      <fieldset><p class="section-title">Contact Information</p><hr>
+        <label for="name" id="name-label"> Name: 
+          <input type="text" id="name" name="name" required placeholder="Your Name" />
+        </label>
+        <label for="email" id="email-label"> Email: 
+          <input type="email" id="email" name="email" required placeholder="Email" />
+        </label>
+        <label for="phone"> Phone: 
+          <input type="text" id="phone" placeholder="Phone (ex: 403-123-4567)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </label>
+        <label for="dropdown">
+          <select id="dropdown" name="dropdown">
+            <option value="">I prefer to be contacted via...</option>
+            <option value="1">Email</option>
+            <option value="2">Phone</option>
+          </select>
+        </label>
+        <br>Best time to contact (please select all that applies): 
+        <label for="morning">
+          <input type="checkbox" class="inline" id="morning" value="0"> Morning (8AM - 12PM)
+        </label>
+        <label for="afternoon">
+          <input type="checkbox" class="inline" id="afternoon" value="1"> Afternoon (12PM - 4PM)
+        </label>
+        <label for="evening">
+          <input type="checkbox" class="inline" id="evening" value="2"> Evening (4PM - 7PM)
+        </label>
+      </fieldset>
+      <fieldset><p class="section-title">Details</p><hr>
+        <label for="office">
+          <input type="text" id="office" required placeholder="Office Name"/>
+        </label>
+        <label for="number" id="number-label" name="number-instruments"> How many... 
+          <input type="number" id="number" min="1" max="100"
+          placeholder="Number of Instruments/Cassettes to be Sharpened">
+        </label>
+        <label for="indiv-instrument">
+          <input id="indiv-instrument" type="radio" name="instrument-type" class="inline" value="0"> 
+            Individual instruments
+        </label>
+        <label for="cassette">
+          <input id="cassette" type="radio" name="instrument-type" class="inline" value="1" 
+            Cassettes
+        </label>
+
+        <label for="comment">
+          <textarea id="comment" rows="5" placeholder="Additional comments (optional)"></textarea>
+        </label>
+      </fieldset>
+      <fieldset></fieldset>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  
+  </body>
+</html>
